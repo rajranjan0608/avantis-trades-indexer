@@ -1,0 +1,33 @@
+{
+  "name": "ponder-indexer",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ponder dev",
+    "start": "ponder start",
+    "db": "ponder db",
+    "codegen": "ponder codegen",
+    "lint": "eslint .",
+    "typecheck": "tsc",
+    "generate-schema": "tsx scripts/generate-schema.ts",
+    "generate-handlers": "tsx scripts/generate-handlers.ts"
+  },
+  "dependencies": {
+    "hono": "^4.5.0",
+    "ponder": "^0.16.3",
+    "viem": "^2.21.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "abitype": "^1.2.3",
+    "eslint": "^8.53.0",
+    "eslint-config-ponder": "^0.16.3",
+    "tsx": "^4.7.0",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.14"
+  },
+  "packageManager": "pnpm@10.19.0+sha512.c9fc7236e92adf5c8af42fd5bf1612df99c2ceb62f27047032f4720b33f8eacdde311865e91c411f2774f618d82f320808ecb51718bfa82c060c4ba7c76a32b8"
+}
