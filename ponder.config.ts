@@ -11,8 +11,6 @@ const blockConfig = {
   endBlock: process.env.PONDER_END_BLOCK === undefined ? undefined : parseInt(process.env.PONDER_END_BLOCK)
 };
 
-console.log(blockConfig);
-
 export default createConfig({
   database: {
     kind: "postgres",
