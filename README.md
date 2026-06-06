@@ -27,6 +27,22 @@ pnpm ponder dev
 
 That's it, the indexer will connect to your database, sync historical data, and begin indexing new blocks as they arrive.
 
+## Block Range
+
+By default, the indexer starts from block `0` and continues in real-time as new blocks arrive. You can narrow the range with two optional environment variables:
+
+| Variable | Description |
+|----------|-------------|
+| `PONDER_START_BLOCK` | Block number to begin indexing from. Defaults to `0`. |
+| `PONDER_END_BLOCK` | Block number to stop indexing at (inclusive). When unset, indexing continues in real-time. |
+
+```bash
+PONDER_START_BLOCK=46901433
+PONDER_END_BLOCK=46901533
+```
+
+Useful for backfilling a specific window of history without syncing from genesis, or for running a one-off historical sync that stops at a known block. Especially useful to debug events in a specific period.
+
 ## Project Structure
 
 ```
